@@ -3,7 +3,7 @@ function [] = print_step( licz, mian, t )
 %   Detailed explanation goes here
 
 sys = tf(licz,mian);
-%printsys(licz,mian);
+printsys(licz,mian);
 
 step(sys,t)
 

@@ -76,7 +76,7 @@ t=0:0.01:10;
 
 k=1;
 T=1;
-Ti=0.3;
+Ti=0.1;
 licz = [k];
 mian = [T*Ti,Ti,0];
 print_impulse(licz,mian,t);
@@ -84,7 +84,7 @@ hold on
 
 k=1;
 T=1;
-Ti=0.5;
+Ti=1;
 licz = [k];
 mian = [T*Ti,Ti,0];
 print_impulse(licz,mian,t);
@@ -100,7 +100,7 @@ title('OdpowiedŸ na impuls jednostkowy, ca³kuj¹cy z inercj¹ I rzêdu. k = const, 
 xlabel('t');
 ylabel('y(t)');
 
-legend('Ti=1','Ti=0.5','Ti=2');
+legend('Ti=0.5','Ti=1','Ti=2');
 
 
 

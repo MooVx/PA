@@ -1,7 +1,7 @@
 close all;
 
 k=1;
-T1=1;
+T1=0.5;
 T2=1;
 t=0:0.01:10;
 
@@ -11,14 +11,14 @@ print_impulse(licz,mian,t);
 hold on
 
 k=0.5;
-T1=1;
+T1=0.5;
 T2=1;
 licz = [k];
 mian = [T1*T2,T1+T2, 1];
 print_impulse(licz,mian,t);
 
 k=2;
-T1=1;
+T1=0.5;
 T2=1;
 licz = [k];
 mian = [T1*T2,T1+T2, 1];
@@ -39,8 +39,8 @@ figure(2);
 t=0:0.01:10;
 
 k=1;
-T1=1;
-T2=1;
+T1=0.1;
+T2=0.1;
 licz = [k];
 mian = [T1*T2,T1+T2, 1];
 print_impulse(licz,mian,t);
@@ -64,7 +64,7 @@ title('Odpowiedü na impuls jednostkowy, inercyjny II rzπd. k = const, T2 = const
 xlabel('t');
 ylabel('y(t)');
 
-legend('T1=1','T1=0.5','T1=2');
+legend('T1=0.9','T1=0.5','T1=2');
 
 hold off;
 
@@ -76,7 +76,7 @@ t=0:0.01:10;
 
 k=1;
 T1=1;
-T2=1;
+T2=0.9;
 licz = [k];
 mian = [T1*T2,T1+T2, 1];
 print_impulse(licz,mian,t);
@@ -100,7 +100,7 @@ title('Odpowiedü na impuls jednostkowy, inercyjny II rzπd. k = const, T1 = const
 xlabel('t');
 ylabel('y(t)');
 
-legend('T2=1','T2=0.5','T2=2');
+legend('T2=0.9','T2=0.5','T2=2');
 
 %patrz na transmitancje, T1 i T2 zmieniajπ dok≥πdnie to samo
 
