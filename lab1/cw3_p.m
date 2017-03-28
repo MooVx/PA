@@ -76,7 +76,7 @@ t=0:0.01:10;
 
 k=1;
 T0=1;
-ksi=0.3;
+ksi=1;
 licz = [k];
 mian = [T0*T0, 2*ksi*T0,1];
 print_impulse(licz,mian,t);
@@ -96,11 +96,18 @@ licz = [k];
 mian = [T0*T0, 2*ksi*T0,1];
 print_impulse(licz,mian,t);
 
+k=1;
+T0=1;
+ksi=2;
+licz = [k];
+mian = [T0*T0, 2*ksi*T0,1];
+print_impulse(licz,mian,t);
+
 title('Odpowiedü na impuls jednostkowy, oscylacyjny II rzπd. k = const, T0 = const ');
 xlabel('t');
 ylabel('y(t)');
 
-legend('ksi=1','ksi=0.5','ksi=0');
+legend('ksi=1','ksi=0.5','ksi=0','ksi=2');
 
 %patrz na transmitancje, T0 i ksi zmieniajπ dok≥adnie to samo
 
