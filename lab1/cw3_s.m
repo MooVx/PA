@@ -45,6 +45,15 @@ licz = [k];
 mian = [T0*T0, 2*ksi*T0,1];
 print_step(licz,mian,t);
 
+hold on
+
+k=1;
+T0=0.578;
+ksi=0.298;
+licz = [k];
+mian = [T0*T0, 2*ksi*T0,1];
+print_step(licz,mian,t);
+
 xlabel('t');
 ylabel('y(t)');
 
