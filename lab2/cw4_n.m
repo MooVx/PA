@@ -24,7 +24,7 @@ licz = [k];
 mian = [T*Ti,Ti,0];
 print_nyquist(licz,mian,t);
 
-title('Charakterystyka Bodego, ca³kuj¹cy z inercj¹ I rzêdu. T = const, Ti = 0.3');
+title('Charakterystyka Nyquista, ca³kuj¹cy z inercj¹ I rzêdu. T = const, Ti = 0.3');
 
 
 
