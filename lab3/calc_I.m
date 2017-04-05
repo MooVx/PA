@@ -1,4 +1,4 @@
-function [ T_best tau_best k_best,G_best ] = calc_I( T_dn,T_up,tau_dn,tau_up,k_dn, k_up,pomiary )
+function [ T_best, tau_best, k_best, G_best ] = calc_I( T_dn,T_up,tau_dn,tau_up,k_dn, k_up,pomiary )
 skok_T = 0.1;
 skok_k = 0.01;
 skok_tau = 0.1;
@@ -26,6 +26,5 @@ for T = T_dn:skok_T:T_up
         end
     end
 end
-
 end
 
