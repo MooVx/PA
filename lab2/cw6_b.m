@@ -83,7 +83,7 @@ bode(G, t); xlim([t(1) t(10000)]);
 
 k=1;
 T=1;
-tau=2;
+tau=100;
 G =  k*exp(-tau*s)/(T*s+1)
 bode(G, t); xlim([t(1) t(10000)]);
 
