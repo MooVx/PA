@@ -1,0 +1,244 @@
+close all
+s=tf('s');
+t=linspace(0,10,10000);
+
+figure(1)
+k=2;
+Td=10;
+Ti=200;
+T=0.5;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1))
+
+y = step(PID,t);
+plot(t,y);
+axis([0 5 0 50]);
+hold on;
+
+k=1;
+Td=10;
+Ti=200;
+T=0.5;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1));
+y = step(PID,t);
+plot(t,y);
+
+title('PID - Td=10 T=0.5 Ti=200');
+legend('k=2','k=1');
+
+hold off;
+
+
+figure(2);
+
+k=1;
+Td=10;
+Ti=200;
+T=0.5;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1))
+
+y = step(PID,t);
+plot(t,y);
+axis([0 5 0 25]);
+hold on;
+
+k=1;
+Td=5;
+Ti=200;
+T=0.5;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1));
+y = step(PID,t);
+plot(t,y);
+
+title('PID - k=1 T=0.5 Ti=200');
+legend('Td=10','Td=5');
+
+hold off;
+
+figure(3);
+
+k=1;
+Td=5;
+Ti=200;
+T=0.5;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1))
+
+y = step(PID,t);
+plot(t,y);
+axis([0 5 0 25]);
+hold on;
+
+k=1;
+Td=5;
+Ti=200;
+T=0.2;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1));
+y = step(PID,t);
+plot(t,y);
+
+title('PID - k=1 Td=5 Ti=200');
+legend('T=0.5','T=0.2');
+
+hold off;
+
+
+%%%%%%%%%%%%nesquik
+
+figure(4)
+k=2;
+Td=10;
+Ti=200;
+T=0.5;
+t=logspace(-3,4,10000);
+
+k=2;
+Td=10;
+Ti=200;
+T=0.5;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1))
+
+nyquist(PID,t);
+hold on;
+
+k=1;
+Td=10;
+Ti=200;
+T=0.5;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1));
+
+nyquist(PID,t);
+
+title('PID - Td=10 T=0.5');
+legend('k=2','k=1');
+
+hold off;
+
+
+figure(5);
+
+k=1;
+Td=10;
+Ti=200;
+T=0.5;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1))
+
+nyquist(PID,t);
+hold on;
+
+k=1;
+Td=5;
+Ti=200;
+T=0.5;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1));
+
+nyquist(PID,t);
+
+title('PID - k=1 T=0.5');
+legend('Td=10','Td=5');
+
+hold off;
+
+figure(6);
+
+k=1;
+Td=5;
+Ti=200;
+T=0.5;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1))
+
+
+nyquist(PID,t);
+
+hold on;
+
+k=1;
+Td=5;
+Ti=200;
+T=0.2;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1));
+
+nyquist(PID,t);
+
+title('PID - k=1 Td=5');
+legend('T=0.5','T=0.2');
+
+hold off;
+
+%%%%%%%%%%%%bode
+figure(7)
+k=2;
+Td=10;
+Ti=200;
+T=0.5;
+t=logspace(-3,3,10000);
+
+k=2;
+Td=10;
+T=0.5;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1))
+
+bode(PID,t);
+hold on;
+
+k=1;
+Td=10;
+Ti=200;
+T=0.5;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1));
+
+bode(PID,t);
+
+title('PID - Td=10 T=0.5');
+legend('k=2','k=1');
+
+hold off;
+
+
+figure(8);
+
+k=1;
+Td=10;
+Ti=200;
+T=0.5;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1))
+
+bode(PID,t);
+hold on;
+
+k=1;
+Td=5;
+Ti=200;
+T=0.5;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1));
+
+bode(PID,t);
+
+title('PID - k=1 T=0.5');
+legend('Td=10','Td=5');
+
+hold off;
+
+figure(9);
+
+k=1;
+Td=5;
+Ti=200;
+T=0.5;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1))
+
+
+bode(PID,t);
+
+hold on;
+
+k=1;
+Td=5;
+Ti=200;
+T=0.2;
+PID=k*(1+1/(Ti*s)+(Td*s)/(T*s+1));
+
+bode(PID,t);
+
+title('PID - k=1 Td=5');
+legend('T=0.5','T=0.2');
+
+hold off;
