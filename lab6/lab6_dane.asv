@@ -1,8 +1,0 @@
-clear all;
-Ti = 1e+06;
-Td=0;
-k=5;
-sim('lab6');
-
-figure(1);
-plot(ScopeData(:,1),S
